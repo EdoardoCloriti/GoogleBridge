@@ -27,6 +27,12 @@ import com.google.api.services.calendar.model.EventReminder;
 import com.orion.googlebridge.GoogleBridge;
 import com.orion.googlebridge.Calendar.ICalendarBridge;
 
+/**
+ * Classe che implementa l'interfaccia <code>ICalendarBridge</code> per la gestione dei Google Calendar
+ *  
+ * @author Edoardo
+ *
+ */
 public class CalendarBridgeImpl extends GoogleBridge  implements ICalendarBridge {
 
 	

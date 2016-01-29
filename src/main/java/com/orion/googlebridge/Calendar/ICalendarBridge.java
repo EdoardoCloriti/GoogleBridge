@@ -16,7 +16,15 @@ import com.google.api.services.calendar.Calendar;
  */
 public interface ICalendarBridge {
 
-	// Authenticazione
+	/**
+	 * Metodo per l'autenticazione su <code>Google Calendar API</code>,
+	 * in caso di errore di validazione bisogna controllare che la applicazione 
+	 * sia registrata nella <a href="https://console.developers.google.com">Google Developer Console </a>  
+	 * @param  dir
+	 * @return Credential
+	 * @throws GeneralSecurityException
+	 * @throws IOException
+	 */
 	public Credential authentication(String dir) throws GeneralSecurityException, IOException;
 	// Creazione dei servizi per i Google Calendar
 	public Calendar getService(Credential credential);

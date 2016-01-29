@@ -30,6 +30,15 @@ public abstract class GoogleBridge {
 		this.APPLICATION_NAME = applicationName;
 	}
 	
+	/**
+	 * Metodo per l'autenticazione su uno dei servizi gestiti dalle API Google,
+	 * in caso di errore di validazione bisogna controllare che la applicazione 
+	 * sia registrata nella <a href="https://console.developers.google.com">Google Developer Console </a>  
+	 * @param dir
+	 * @return Credential
+	 * @throws GeneralSecurityException
+	 * @throws IOException
+	 */
 	public Credential authentication(String dir) throws GeneralSecurityException, IOException {
 		java.io.File DATA_STORE_DIR = new java.io.File(dir);
 		FileDataStoreFactory dataStoreFactory = new FileDataStoreFactory(DATA_STORE_DIR);
