@@ -23,6 +23,13 @@ public abstract class GoogleBridge {
 	protected String APPLICATION_NAME = null;
 	protected static final String DATE_PATTERN = "dd-MM-yyyy HH:mm:ss";
 	
+	/**
+	 * Costruttore del <code>Calendar Bridge</code> Inizializza il nome dell'applicazione, 
+	 * il <code>GoogleNetHttpTransport</code> e il  <code>jsonFactory</code>
+	 * @param applicationName
+	 * @throws GeneralSecurityException
+	 * @throws IOException
+	 */
 	public GoogleBridge(String applicationName) throws GeneralSecurityException, IOException {
 		// Set up the HTTP transport and JSON factory
 		this.httpTransport = GoogleNetHttpTransport.newTrustedTransport();
@@ -54,6 +61,13 @@ public abstract class GoogleBridge {
 		return credential;
 	}
 	
+	/**
+	 * Effettua il Build di <code>FileDataStoreFactory</code> <code>GoogleClientSecrets</code>
+	 * @param dataStoreFactory
+	 * @param clientSecrets
+	 * @return
+	 * @throws IOException
+	 */
 	abstract protected GoogleAuthorizationCodeFlow getFlow(FileDataStoreFactory dataStoreFactory, GoogleClientSecrets clientSecrets) throws IOException;
 
 }

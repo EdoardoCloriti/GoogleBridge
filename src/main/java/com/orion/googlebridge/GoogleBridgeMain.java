@@ -39,15 +39,15 @@ public class GoogleBridgeMain {
 		ICalendarBridge bridge = new CalendarBridgeImpl(applicationName);
 		Credential credential = bridge.authentication(dir);
 		Calendar service = bridge.getService(credential);
-		// boolean isPresent=bridge.existCalendar(service,"Work");
-		// bridge.removeCalendar(service, "prova");
-		// bridge.printSummary(service);
-		// bridge.addCalendar(service, "prova","Ã¨ stata dura ma per ora un calendario condiviso lo ho creato :D ",null,null);
-		// bridge.printSummary(service);
-		// bridge.removeCalendar(service, "prova");
-		// bridge.printSummary(service);
-		// bridge.setACL(service, "prova", "orion.development.cloriti@gmail.com", "owner");
-		// bridge.removeACL(service, "prova", "orion.development.cloriti@gmail.com", "owner");
+		 boolean isPresent=bridge.existCalendar(service,"Work");
+		 bridge.removeCalendar(service, "prova");
+		 bridge.printSummary(service);
+		 bridge.addCalendar(service, "prova","Ã¨ stata dura ma per ora un calendario condiviso lo ho creato :D ",null,null);
+		 bridge.printSummary(service);
+		 bridge.removeCalendar(service, "prova");
+		 bridge.printSummary(service);
+		 bridge.setACL(service, "prova", "orion.development.cloriti@gmail.com", "owner");
+		 bridge.removeACL(service, "prova", "orion.development.cloriti@gmail.com", "owner");
 		bridge.insertEvent(service, "prova", "evento-prova", "location prova", "questa Ã¨ una prova", "26-01-2016 08:30:00", "26-01-2016 17:30:00", null, null, null, null, null);
 	}
 
