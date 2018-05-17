@@ -51,7 +51,7 @@ public abstract class GoogleBridge {
 		FileDataStoreFactory dataStoreFactory = new FileDataStoreFactory(DATA_STORE_DIR);
 
 		// Load client secrets
-		GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(jsonFactory, new InputStreamReader(CalendarBridgeImpl.class.getResourceAsStream("/client_id.json")));
+		GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(jsonFactory, new InputStreamReader(CalendarBridgeImpl.class.getResourceAsStream("/client_secret.json")));
 
 		// Set up authorization code flow
 		GoogleAuthorizationCodeFlow flow = getFlow(dataStoreFactory, clientSecrets);

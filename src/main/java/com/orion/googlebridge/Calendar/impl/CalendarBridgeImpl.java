@@ -41,7 +41,9 @@ public class CalendarBridgeImpl extends GoogleBridge  implements ICalendarBridge
 	}
 
 	protected GoogleAuthorizationCodeFlow getFlow(FileDataStoreFactory dataStoreFactory, GoogleClientSecrets clientSecrets) throws IOException {
-		return new GoogleAuthorizationCodeFlow.Builder(httpTransport, jsonFactory, clientSecrets, Collections.singleton(CalendarScopes.CALENDAR)).setDataStoreFactory(dataStoreFactory).build();
+		return new GoogleAuthorizationCodeFlow.Builder(httpTransport, jsonFactory, clientSecrets, Collections.singleton(CalendarScopes.CALENDAR))
+				.setDataStoreFactory(dataStoreFactory)
+				.build();
 	}
 
 	public Calendar getService(Credential credential) {
@@ -191,6 +193,7 @@ public class CalendarBridgeImpl extends GoogleBridge  implements ICalendarBridge
 	private boolean isNullOrEmpry(String field) {
 		return field != null && !"".equals(field);
 	}
+	
 	private boolean validateRole(String role) {
 		return "none".equalsIgnoreCase(role) || "freeBusyReader".equalsIgnoreCase(role) || "reader".equalsIgnoreCase(role) || "writer".equalsIgnoreCase(role) || "owner".equalsIgnoreCase(role);
 	}

@@ -21,7 +21,9 @@ public class GMailBridgeImpl extends GoogleBridge implements IGMailBridge {
 
 	@Override
 	protected GoogleAuthorizationCodeFlow getFlow(FileDataStoreFactory dataStoreFactory, GoogleClientSecrets clientSecrets) throws IOException {
-		return new GoogleAuthorizationCodeFlow.Builder(httpTransport, jsonFactory, clientSecrets, Collections.singleton(GmailScopes.MAIL_GOOGLE_COM)).setDataStoreFactory(dataStoreFactory).build();
+		return new GoogleAuthorizationCodeFlow.Builder(httpTransport, jsonFactory, clientSecrets, Collections.singleton(GmailScopes.MAIL_GOOGLE_COM))
+				.setDataStoreFactory(dataStoreFactory)
+				.build();
 	}
 
 	public Gmail getService(Credential credential) {

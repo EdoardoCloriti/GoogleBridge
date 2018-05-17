@@ -5,7 +5,7 @@ import java.security.GeneralSecurityException;
 
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.services.drive.Drive;
-import com.google.api.services.drive.Drive.Files.Insert;
+import com.google.api.services.drive.Drive.Files.Create;
 import com.google.api.services.drive.model.File;
 
 public interface IDriveBridge {
@@ -46,7 +46,7 @@ public interface IDriveBridge {
 	 * @return
 	 * @throws IOException
 	 */
-	public Insert createFile(Drive service, String title, String description, String mimeKey, String parentId, java.io.File fileContent) throws IOException;
+	public Create createFile(Drive service, String title, String description, String mimeKey, String parentId, java.io.File fileContent) throws IOException;
 
 	/**
 	 * Creazione di una directory
@@ -56,7 +56,7 @@ public interface IDriveBridge {
 	 * @return
 	 * @throws IOException
 	 */
-	public Insert createDirectory(Drive service, String directoryName, String parentId) throws IOException;
+	public Create createDirectory(Drive service, String directoryName, String parentId) throws IOException;
 
 	/**
 	 * Creazione delle permission per un utente

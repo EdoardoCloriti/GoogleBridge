@@ -18,7 +18,7 @@ import com.orion.googlebridge.gmail.impl.GMailBridgeImpl;
 public class GoogleBridgeMain {
 
 	public static void main(String[] args) throws ParseException {
-		String dir = "D:\\.store\\calendar";
+		String dir = "C:\\.store\\calendar";
 		String applicationName = "Google-Bridge-Test";
 
 		try {
